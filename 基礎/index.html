@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>  
+  <script src="https://unpkg.com/vue@2.5.21"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- 4.Vueコンストラクタのelオプション -->
+<!-- 5.Vueコンストラクタのdataオプション -->
+<!-- 6.Vueインスタンスの$watchメソッド -->
+<!-- マスタッシュ記法という -->
+<!-- 8.Vue.jsのテンプレートと仮想DOM -->
+<!-- <div id="app">
+  {{ message }}
+</!-->
+
+<!-- 7.Vueインスタンスのwatchオプション -->
+<!-- <div id="app">
+  {{ total_num }}
+</div> -->
+<!-- 挙動確認 -->
+<!-- vm.numbers.push(10) -->
+  
+
+<!-- 9. v-bindディレクティブの解説 -->
+<!-- v-bind:を省略してる -->
+<!-- マウスポインターを当てると"Hello World"が表示されるらしい -->
+<!-- <div id="app">
+  <p :title="message">
+    マウスポインターを当ててください</p>
+</div> -->
+
+
+<!-- 10. フィルター機能の解説 -->
+<!-- <div id="app">
+  <p>合計 {{ sum | numberWithDelimiter }}円</p>
+</div> -->
+  
+
+<!-- 11. computedプロパティの解説 -->
+<!-- テンプレートでcomputedプロパティを使用する際は、メソッドの呼び出しではなくプロパティとしてbutton_labelとだけ書く -->
+<!-- <div id="app">
+  <button :disabled='button_disabled'>
+    {{ button_label }}
+  </button>
+  <button :disabled='button_disabled'>
+    {{ button_label }}
+  </button>
+</div> -->
+
+<!-- 12.v-onディレクティブとmethodsプロパティ -->
+<!-- <div id="app">
+  <button @click='clickLog' @mouseenter='hoverLog'>
+    ログ
+  </button>
+</div> -->
+  
+
+<!-- 13. v-if, v-else-if,v-elseディレクティブ -->
+<!-- <div v-show="reserve"></div> -->
+<!-- <div id="app">
+  <div>
+    <label>
+      <input type="checkbox" v-model="reserve">予約する
+    </label>
+  </div>
+  <div v-if="reserve">
+    予約日：<input type="date">
+  </div>
+</div> -->
+
+
+<!-- 14. v-if, v-else-if,v-elseディレクティブを使用した条件分岐 -->
+<!-- <div id="app">
+  <div v-if="message">
+    {{ message }}
+  </div>
+  <div v-else-if="message === ''">
+    メッセージが空文字です
+  </div>
+  <div v-else>
+    メッセージがありません
+  </div>
+</div> -->
+
+
+<!-- 15.v-forディレクティブの解説 -->
+<!-- v-on:changeは@changeと同じ -->
+<!-- delタグを使えば横線が入る -->
+<!-- <div id="app">
+  <h2>Todos:</h2>
+  <ol>
+    <li v-for="todo in todos">
+      <label>
+        <input type="checkbox"
+          v-on:change="toggle(todo)"
+          v-bind:checked="todo.done">
+
+        <del v-if="todo.done">
+          {{ todo.text }}
+        </del>
+        <span v-else>
+          {{ todo.text }}
+        </span>
+      </label>
+    </li>
+  </ol>
+</div>
+   -->
+
+
+<!-- 16. v-forディレクティブにおけるkeyの指定について -->
+<!-- <div id="app">
+  <h2>Todos:</h2>
+  <ol>
+    <li v-for="todo in todos">
+      <label>
+        <input type="checkbox"
+          v-on:change="toggle(todo)"
+          v-bind:checked="todo.done">
+
+        <del v-if="todo.done">
+          {{ todo.text }}
+        </del>
+        <span v-else>
+          {{ todo.text }}
+        </span>
+      </label>
+    </li>
+  </ol>
+</div> -->
+  
+
+<!-- 17 v-modelディレクティブの解説 -->
+<!-- <div id="app">
+  <div>
+    <label>
+      <span>名前：</span>
+      <input v-model="name">    
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>メールアドレス：</span>
+      <input v-model="email">    
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>お問合せ内容：</span>
+      <textarea v-model="text" rows="5"></textarea>
+    </label>
+  </div>
+  <button @click="submit">送信</button>
+</div> -->
+  
+
+<!-- 18. templateオプションの解説 -->
+<!-- <div id="app"></div> -->
+
+
+<!-- 20 ライフサイクルフックで呼び出されるメソッドの定義方法 -->
+<!-- <div id="app">
+  {{ message }}
+</div> -->
+  
+
+<!-- 22. コンポーネントの作成方法 -->
+<!-- 23.コンポーネントの親子構造について -->
+<!-- 24. コンポーネントのローカル登録とグローバル登録 -->
+<!-- 24：↓はローカル登録なのでhtmlに描いても呼び出されない-->
+<!-- コレ<list-title></list-title>  -->
+<!-- 25.親コンポーネントから子コンポーネントへのデータの伝達 -->
+<!-- 26. propsとdataの違いについて -->
+<!-- <div id="app">
+  <user-list></user-list>
+</div> -->
+
+<!-- 27.子コンポーネントから親コンポーネントへのデータの渡し方 -->
+<!-- 28..sync修飾子を使用したのデータ -->
+<!-- <div id="app">
+  <user-detail></user-detail>
+</div> -->
+
+<!-- 29. スロットの使用方法について -->
+<!-- <div id="app">
+  <layout>
+    <template slot='header'>
+      Header
+    </template>
+    Main
+    コンテンツ
+    <span slot='footer'>
+      Footer
+    </span>
+  </layout>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="script.js"></script>
